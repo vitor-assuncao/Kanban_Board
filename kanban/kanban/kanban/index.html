@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="toggle-dark" onclick="toggleDarkMode()">🌙</button>
+  <h2>Kanban Board</h2>
+  <div class="board">
+    <div class="column" data-status="todo">
+      <h3>A Fazer</h3>
+      <div class="tasks"></div>
+      <input type="text" placeholder="Nova tarefa" />
+      <select class="priority-select">
+        <option value="normal">Normal</option>
+        <option value="alta">Alta</option>
+        <option value="baixa">Baixa</option>
+      </select>
+      <button onclick="addTask(this)">Adicionar</button>
+    </div>
+    <div class="column" data-status="doing">
+      <h3>Fazendo</h3>
+      <div class="tasks"></div>
+    </div>
+    <div class="column" data-status="done">
+      <h3>Feito</h3>
+      <div class="tasks"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
